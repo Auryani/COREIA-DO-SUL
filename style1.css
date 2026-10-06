@@ -1,0 +1,587 @@
+/* ==============================
+   CONFIGURAÇÕES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #05070d;
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   MENU
+============================== */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(5, 7, 13, 0.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #182033;
+}
+
+.navbar {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #e63946;
+}
+
+
+/* MENU CELULAR */
+
+.menu-btn {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   INÍCIO
+============================== */
+
+.hero {
+    max-width: 1200px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 140px 20px 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.pequeno {
+    color: #e63946;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1,
+.page-header h1,
+.quiz-page h1 {
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.page-header h1 span,
+.quiz-page h1 span {
+    color: #0d48c6;
+}
+
+.hero p,
+.page-header p,
+.quiz-page > p {
+    color: #b7bcc7;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   BOTÕES
+============================== */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 25px;
+
+    background: #e63946;
+
+    color: rgb(255, 254, 254);
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #061e50;
+
+    transform: translateY(-4px);
+}
+
+
+/* ==============================
+   CARD DA BANDEIRA
+============================== */
+
+.hero-image {
+    width: 400px;
+
+    height: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.korea-card {
+    width: 310px;
+
+    height: 360px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d47a1,
+            #07152e
+        );
+
+    border: 2px solid #e63946;
+
+    box-shadow:
+        0 30px 80px rgba(37, 99, 235, 0.25);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    text-align: center;
+}
+
+.bandeira {
+    font-size: 100px;
+
+    margin-bottom: auto;
+}
+
+.korea-card h2 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.korea-card p {
+    color: #c7ccd6;
+}
+
+
+/* ==============================
+   CABEÇALHO DAS PÁGINAS
+============================== */
+
+.page-header {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 170px 20px 80px;
+
+    text-align: center;
+}
+
+.page-header h1 {
+    max-width: 850px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.page-header p {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ==============================
+   SEÇÕES
+============================== */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 20px;
+}
+
+.destaque {
+    border-top: 1px solid #182033;
+
+    text-align: center;
+}
+
+.destaque h2 {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.destaque p {
+    color: #aaa;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   CARDS
+============================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.info-card {
+    padding: 30px;
+
+    min-height: 230px;
+
+    background: #0d111c;
+
+    border: 1px solid #1c2638;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.info-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+
+    height: 100%;
+
+    background: #e63946;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 15px 40px rgba(37, 99, 235, 0.15);
+}
+
+.emoji {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: #9da4b2;
+
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   QUIZ
+============================== */
+
+.quiz-page {
+    max-width: 1200px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 170px 20px 100px;
+
+    text-align: center;
+}
+
+.quiz-page > p {
+    max-width: 650px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* CONTAINER DOS QUIZZES */
+
+.quiz-container {
+    margin-top: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    max-width: 850px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* CADA DIV DO QUIZ */
+
+.quiz-box {
+    flex: 1;
+
+    padding: 45px 30px;
+
+    background: #0d111c;
+
+    border: 1px solid #1c2638;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.quiz-box:hover {
+    transform: translateY(-8px);
+
+    border-color: #e63946;
+}
+
+.quiz-box h2 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.quiz-box p {
+    color: #9da4b2;
+
+    line-height: 1.6;
+}
+
+.grande {
+    font-size: 65px;
+}
+
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: #737986;
+
+    border-top: 1px solid #182033;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+/* ==============================
+   CELULAR
+============================== */
+
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: #080b13;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 140px;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    .page-header {
+        padding-top: 140px;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* QUIZZES NO CELULAR */
+
+    .quiz-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .quiz-box {
+        width: 100%;
+    }
+
+
+    .section {
+        padding: 60px 20px;
+    }
+
+}
